@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Windows;
+using System.Windows.Markup;
 
 [assembly: AssemblyTitle("Globomantics.UI.WPF")]
 [assembly: AssemblyDescription("A library of reusable styles, themes, icons, controls, and other stuff")]
@@ -18,6 +19,7 @@ using System.Windows;
     ResourceDictionaryLocation.SourceAssembly
 )]
 
+[assembly: XmlnsDefinition("http://globomantics.com/2019/ui/wpf", "Globomantics.UI.WPF")]
 
 // Version information for an assembly consists of the following four values:
 //
