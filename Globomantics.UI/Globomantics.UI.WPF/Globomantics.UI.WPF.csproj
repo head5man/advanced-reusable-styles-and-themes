@@ -85,10 +85,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Globomantics.UI.WPF.nuspec" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if $(ConfigurationName) == Release (
+  nuget pack "$(ProjectPath)" -Properties Configuration=Release
+  xcopy "$(TargetDir)*.nupkg" "C:\NuGet" /C /Y
+)</PostBuildEvent>
+  </PropertyGroup>
 </Project>
