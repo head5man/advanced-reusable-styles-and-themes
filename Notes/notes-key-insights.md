@@ -6,7 +6,7 @@
 - Download and install nuget.exe (https://www.nuget.org/downloads) locally to C:\NuGet
 - unblock nuget.exe from file properties
 - Add install path to environment variable Path
-- Run command `nuget spec` in the project folder to create <project-name>.nuspec
+- Run command `nuget spec` in the project folder to create <project-name>.nuspec 
 - Setup nuget package build in project setup `Post-build event command line`
 ```
 if $(ConfigurationName) == Release (
@@ -14,4 +14,11 @@ if $(ConfigurationName) == Release (
   xcopy "$(TargetDir)"*.nupkg "C:\NuGet" /C /Y
 )
 ```
+
+### Using the resources as project reference (no NuGet package)
+- Create application project
+- Reference Globomantics.UI.WPF
+- Merge in main resource dictionary
+<ResourceDictionary Source="/Globomantics.UI.WPF;component/Themes/Globomantics.UI.WPF.xaml"/>
+`component` referenced by assembly
 
