@@ -36,4 +36,8 @@ Options:
 * Newline exemption elements += Setter, Style, ControlTemplate, SolidColorBrush
 * First-line attributes: x:Class, x:Key, x:name
 
-
+#### Visual state manager problems
+Changing theme from "light.xaml" -> "dark.xaml" was not setting the correct mouseover.
+This is due to setting resources to storyboard get 'frozen'.
+>Solution:
+Adding borders to template for mouseOver and pressed in Collapsed state and setting visibility in storyboard.
