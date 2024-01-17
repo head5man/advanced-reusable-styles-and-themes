@@ -3,6 +3,12 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+# python notebook states
+**/.ipynb_checkpoints
+
+# vscode settings
+**/.vscode
+
 # User-specific files
 *.rsuser
 *.suo
