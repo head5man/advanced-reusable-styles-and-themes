@@ -6,6 +6,17 @@ namespace Globomantics.UI.WPF
 {
     public sealed class Theme
     {
+        static class dark
+        {
+            public const string CONTENT_BG = "#FFFFFFFF";
+            public const string CONTENT_FG = "#FF000000";
+        }
+
+        static class light
+        {
+            public const string CONTENT_BG = "#FF000000";
+            public const string CONTENT_FG = "#FFFFFFFF";
+        }
         [ThreadStatic]
         private static ResourceDictionary resourceDictionary;
 
@@ -35,12 +46,14 @@ namespace Globomantics.UI.WPF
             {
                 case ThemeType.Light:
                     {
-                        // TODO: Add resources of light theme
+                        SetResource(nameof(ThemeResourceKey.ContentBackground), new SolidColorBrush(ColorFromHex(light.CONTENT_BG)));
+                        SetResource(nameof(ThemeResourceKey.ContentForeground), new SolidColorBrush(ColorFromHex(light.CONTENT_FG)));
                         break;
                     }
                 case ThemeType.Dark:
                     {
-                        // TODO: Add resources of dark theme
+                        SetResource(nameof(ThemeResourceKey.ContentBackground), new SolidColorBrush(ColorFromHex(dark.CONTENT_BG)));
+                        SetResource(nameof(ThemeResourceKey.ContentForeground), new SolidColorBrush(ColorFromHex(dark.CONTENT_FG)));
                         break;
                     }
             }
