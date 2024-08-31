@@ -6,17 +6,18 @@ namespace Globomantics.UI.WPF
 {
     public sealed class Theme
     {
-        static class dark
+        static class light
         {
             public const string CONTENT_BG = "#FFFFFFFF";
             public const string CONTENT_FG = "#FF000000";
         }
 
-        static class light
+        static class dark
         {
             public const string CONTENT_BG = "#FF000000";
             public const string CONTENT_FG = "#FFFFFFFF";
         }
+
         [ThreadStatic]
         private static ResourceDictionary resourceDictionary;
 
@@ -30,7 +31,7 @@ namespace Globomantics.UI.WPF
                 }
 
                 resourceDictionary = new ResourceDictionary();
-                LoadThemeType(ThemeType.Light);
+                LoadThemeType(ThemeType);
                 return resourceDictionary;
             }
         }
