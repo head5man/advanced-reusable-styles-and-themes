@@ -41,3 +41,11 @@ Changing theme from "light.xaml" -> "dark.xaml" was not setting the correct mous
 This is due to setting resources to storyboard get 'frozen'.
 >Solution:
 Adding borders to template for mouseOver and pressed in Collapsed state and setting visibility in storyboard.
+
+### Creating User Switchable Themes
+Our theme Classes and types
+* ThemeType -- Light, Dark
+* ThemeResourceKey -- Individual resource keys
+* ThemeResourceExtension -- Dynamic resource extension
+* Theme -- Main theme class
+* ThemeResourceDictionary -- Custom resource dictionary
