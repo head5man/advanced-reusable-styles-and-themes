@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Globomantics.UI.WPF;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace Dev
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void OnThemeSwitch(object sender, RoutedEventArgs e)
+        {
+            var theme = Theme.ThemeType != ThemeType.Light ? ThemeType.Light : ThemeType.Dark;
+            Theme.LoadThemeType(theme);
         }
     }
 }
