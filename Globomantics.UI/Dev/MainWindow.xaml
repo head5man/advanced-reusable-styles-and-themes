@@ -6,6 +6,13 @@
     Width="800"
     Height="450">
     <Grid Background="{gui:ThemeResource ResourceKey=ContentBackground}">
+        <CheckBox x:Name="EnabledInput"
+            Margin="8"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="IsEnabled"
+            IsChecked="True" />
+
         <Button
             Margin="8"
             Padding="8,0"
@@ -14,11 +21,26 @@
             Click="OnThemeSwitch"
             Content="Switch theme"
             IsDefault="True" />
-        <TextBlock
+
+        <StackPanel
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            FontSize="16"
-            Foreground="{gui:ThemeResource ResourceKey=ContentForeground}"
-            Text="This is a test!" />
+            IsEnabled="{Binding IsChecked, ElementName=EnabledInput}">
+
+            <TextBlock
+                Margin="0,8"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="16"
+                Foreground="{gui:ThemeResource ResourceKey=ContentForeground}"
+                Text="This is a test!" />
+
+            <Button
+                Margin="0,8"
+                Content="Button" />
+            <CheckBox
+                Margin="0,8"
+                Content="CheckBox" />
+        </StackPanel>
     </Grid>
 </Window>
