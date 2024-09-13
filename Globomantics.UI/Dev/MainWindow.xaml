@@ -35,12 +35,18 @@
                 Foreground="{gui:ThemeResource ResourceKey=ContentForeground}"
                 Text="This is a test!" />
 
-            <Button
-                Margin="0,8"
-                Content="Button" />
-            <CheckBox
-                Margin="0,8"
-                Content="CheckBox" />
+            <Button Margin="0,8" Content="Button" />
+            <CheckBox Margin="0,8" Content="CheckBox" />
+            <ComboBox Margin="0,8" IsEditable="False">
+                <ComboBoxItem Content="Item 1" IsSelected="True" />
+                <ComboBoxItem Content="Item 2" IsSelected="True" />
+                <ComboBoxItem Content="Item 3" IsSelected="True" />
+            </ComboBox>
+            <ComboBox Margin="0,8" IsEditable="True">
+                <ComboBoxItem Content="Item 1" IsSelected="True" />
+                <ComboBoxItem Content="Item 2" IsSelected="True" />
+                <ComboBoxItem Content="Item 3" IsSelected="True" />
+            </ComboBox>
         </StackPanel>
     </Grid>
 </Window>
