@@ -25,11 +25,5 @@ namespace Dev
         {
             InitializeComponent();
         }
-
-        private void OnThemeSwitch(object sender, RoutedEventArgs e)
-        {
-            var theme = Theme.ThemeType != ThemeType.Light ? ThemeType.Light : ThemeType.Dark;
-            Theme.LoadThemeType(theme);
-        }
     }
 }

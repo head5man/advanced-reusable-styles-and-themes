@@ -114,4 +114,5 @@
         <Setter Property="Template" Value="{StaticResource MainWindowTemplate}" />
     </Style>
 
+    <Style BasedOn="{StaticResource MainWindowStyle}" TargetType="{x:Type Window}" />
 </ResourceDictionary>
