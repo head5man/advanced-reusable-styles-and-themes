@@ -49,6 +49,7 @@
                     <ComboBoxItem Content="Item 2" IsSelected="True" />
                     <ComboBoxItem Content="Item 3" IsSelected="True" />
                 </ComboBox>
+                <TextBox Margin="0,8" Text="TextBox" />
             </StackPanel>
         </GroupBox>
     </Grid>
