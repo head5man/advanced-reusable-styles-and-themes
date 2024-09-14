@@ -20,6 +20,8 @@ using System.Windows.Markup;
 )]
 
 [assembly: XmlnsDefinition("http://globomantics.com/2019/ui/wpf", "Globomantics.UI.WPF")]
+[assembly: XmlnsDefinition("http://globomantics.com/2019/ui/wpf", "Globomantics.UI.WPF.Controls")]
+[assembly: XmlnsDefinition("http://globomantics.com/2019/ui/wpf", "Globomantics.UI.WPF.Converters")]
 
 // Version information for an assembly consists of the following four values:
 //
