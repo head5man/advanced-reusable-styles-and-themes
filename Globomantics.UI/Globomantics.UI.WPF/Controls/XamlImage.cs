@@ -11,7 +11,7 @@ namespace Globomantics.UI.WPF.Controls
                 typeof(XamlImage), new FrameworkPropertyMetadata(typeof(XamlImage)));
 
             IsTabStopProperty.OverrideMetadata(
-                typeof(XamlImage), new FrameworkPropertyMetadata(typeof(XamlImage)));
+                typeof(XamlImage), new FrameworkPropertyMetadata(false));
         }
     }
 }
