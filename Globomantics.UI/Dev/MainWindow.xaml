@@ -14,7 +14,7 @@
             Content="IsEnabled"
             IsChecked="True" />
         <GroupBox
-            Width="200"
+            Width="Auto"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Header="GroupBox"
@@ -42,6 +42,22 @@
                     <ComboBoxItem Content="Item 3" IsSelected="True" />
                 </ComboBox>
                 <TextBox Margin="0,8" Text="TextBox" />
+                <StackPanel
+                    Height="24"
+                    Margin="0,8,0,0"
+                    Orientation="Horizontal">
+                    <CheckBox x:Name="ValueInput"
+                        VerticalAlignment="Center"
+                        Content="BoolToVisibilityFlexConverter" />
+                    <Border
+                        Width="24"
+                        Height="24"
+                        Margin="16,0,0,0"
+                        Background="Red"
+                        Visibility="{Binding IsChecked, ElementName=ValueInput, Converter={gui:BoolToVisibilityFlexConverter Inverted=True}}">
+                        <gui:XamlImage Background="Transparent" Foreground="{gui:ThemeResource ResourceKey=WindowHeaderForeground}" Template="{DynamicResource Icon_TeRex}" />
+                    </Border>
+                </StackPanel>
             </StackPanel>
         </GroupBox>
     </Grid>
