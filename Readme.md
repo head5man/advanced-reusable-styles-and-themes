@@ -1,3 +1,5 @@
+original contents of Readme.txt:
+```
 ========================================================
 Advanced Reusable Styles and Themes in WPF - Source Code
 ========================================================
@@ -18,3 +20,4 @@ The TeRex app needs a Globomantics.UI.WPF NuGet package located in a local NuGet
 * In Visual Studio check Tools > Options > NuGet Package Manager > Package Sources and
   make sure there is a source called Dev pointing to C:\NuGet
 * Build and run
+```
