@@ -1,3 +1,22 @@
+### Summary
+
+Working through the steps in skills/pluralsight course [https://app.pluralsight.com/library/courses/wpf-advanced-reusable-styles-themes](https://app.pluralsight.com/library/courses/wpf-advanced-reusable-styles-themes/table-of-contents)
+
+The course provides an excellent example of creating a runtime switchable theme(s) and an overview of working with, distributing and applying xaml styles in an client application.
+
+I have mostly applied the changes introduced in the course chapters but have also taken the liberty to apply some personal preferences and improvements.
+As an example of a preference or improvement is the reimplementation of the ThemeResource classes and the coupling with the resource keys.
+The main goal being to make the theme implementantion reusable and customizable e.g. with json files containing the base key values.
+While some might perceive this as a unnecessary complication of a perfectly working copy-paste pattern,
+leveraging properties and base classes allows for a encapsulation of the themes within classes,
+resulting in a more atomic and orderly theme loading.
+
+Author of course materials:
+
+https://app.pluralsight.com/profile/author/keith-harvey
+
+http://keithharvey.com/
+
 original contents of Readme.txt:
 ```
 ========================================================
