@@ -7,8 +7,8 @@
     Title="TeRex - Time &amp; Expenses for Jessica Vantile"
     Width="1024"
     Height="768"
+    Icon="{Binding WindowIconKey, Converter={gui:XamlImageKeyToImageSourceConverter}}"
     Style="{DynamicResource MainWindowStyle}">
-    <!--Icon="{Binding WindowIconKey, Converter={gui:XamlImageKeyToImageSourceConverter ForegroundResourceKey=WindowHeaderForeground, Height=16, Width=16}}"-->
     <Window.DataContext>
         <local:MainWindowViewModel />
     </Window.DataContext>

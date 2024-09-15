@@ -12,8 +12,17 @@ namespace Globomantics.UI.WPF.Converters
 {
     public class XamlImageKeyToImageSourceConverter : MarkupExtension, IValueConverter
     {
+        /// <summary>
+        /// Height <para/> default(16)
+        /// </summary>
         public double Height { get; set; } = 16;
+        /// <summary>
+        /// Width <para/> default(16)
+        /// </summary>
         public double Width { get; set; } = 16;
+        /// <summary>
+        /// ForegroundResourceKey <para/> default("WindowHeaderForeground")
+        /// </summary>
         public string ForegroundResourceKey { get; set; } = "WindowHeaderForeground";
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)

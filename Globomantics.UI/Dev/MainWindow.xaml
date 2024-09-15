@@ -5,6 +5,7 @@
     Title="MainWindow"
     Width="800"
     Height="450"
+    Icon="{Binding Source=Icon_Logo, Converter={gui:XamlImageKeyToImageSourceConverter}}"
     Style="{StaticResource MainWindowStyle}">
     <Grid Background="{gui:ThemeResource ResourceKey=ContentBackground}">
         <CheckBox x:Name="EnabledInput"
@@ -55,7 +56,10 @@
                         Margin="16,0,0,0"
                         Background="Red"
                         Visibility="{Binding IsChecked, ElementName=ValueInput, Converter={gui:BoolToVisibilityFlexConverter Inverted=True}}">
-                        <gui:XamlImage Background="Transparent" Foreground="{gui:ThemeResource ResourceKey=WindowHeaderForeground}" Template="{DynamicResource Icon_TeRex}" />
+                        <gui:XamlImage
+                            Background="Transparent"
+                            Foreground="{gui:ThemeResource ResourceKey=WindowHeaderForeground}"
+                            Template="{DynamicResource Icon_TeRex}" />
                     </Border>
                 </StackPanel>
             </StackPanel>
