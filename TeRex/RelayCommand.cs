@@ -3,11 +3,21 @@ using System.Windows.Input;
 
 namespace TeRex
 {
-	public class RelayCommand : ICommand
+    public class RelayCommandBase
+    {
+        public event EventHandler CanExecuteChanged;
+
+        public void RaiseCanExecuteChanged()
+        {
+            CanExecuteChanged?.Invoke(this, EventArgs.Empty);
+        }
+    }
+
+	public class RelayCommand : RelayCommandBase, ICommand
 	{
 		private readonly Action action;
 
-		public RelayCommand(Action action)
+        public RelayCommand(Action action)
 		{
 			this.action = action;
 		}
@@ -16,8 +26,6 @@ namespace TeRex
 		{
 			return true;
 		}
-
-		public event EventHandler CanExecuteChanged;
 
 		public void Execute(object parameter)
 		{
