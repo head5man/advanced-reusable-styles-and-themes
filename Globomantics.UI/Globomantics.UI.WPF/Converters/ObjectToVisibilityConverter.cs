@@ -17,7 +17,7 @@ namespace Globomantics.UI.WPF.Converters
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return (value is null) & !Invert ? NullVisibility : Visibility.Visible;
+            return (value is null) ^ Invert ? NullVisibility : Visibility.Visible;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
