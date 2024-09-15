@@ -36,8 +36,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Globomantics.UI.WPF, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\Globomantics.UI\packages\Globomantics.UI.WPF.1.0.1\lib\net472\Globomantics.UI.WPF.dll</HintPath>
+    <Reference Include="Globomantics.UI.WPF, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Globomantics.UI\packages\Globomantics.UI.WPF.1.0.2\lib\net472\Globomantics.UI.WPF.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
